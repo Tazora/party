@@ -34,8 +34,18 @@ const schema = {
     // },
   },
 
-  name: {
-    label: 'Name',
+  title: {
+    label: 'Titel',
+    type: String,
+    optional: false,
+    canRead: ['guests'],
+    canCreate: ['members'],
+    canUpdate: ['members'],
+    searchable: true,
+  },
+
+  artist: {
+    label: 'Künstler',
     type: String,
     optional: true,
     canRead: ['guests'],
@@ -44,15 +54,15 @@ const schema = {
     searchable: true,
   },
 
-  testfield: {
-    label: 'Testfeld',
-    type: String,
+  votes: {
+    label: 'Votes',
+    type: Number,
     optional: true,
-    input: 'textarea',
+    onCreate: () => {
+      return 0;
+    },
     canRead: ['guests'],
-    canCreate: ['members'],
     canUpdate: ['members'],
-    searchable: true,
   },
 
 };

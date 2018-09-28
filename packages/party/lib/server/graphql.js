@@ -20,20 +20,20 @@ addGraphQLQuery(`SchemaContents: String`);
 
 /*
 
-MoviesCount resolver
+MoppedsCount resolver
 
-Used to display the total number of documents in the Movies collection
+Used to display the total number of documents in the Moppeds collection
 
 */
-import Movies from '../modules/collection.js';
+import Moppeds from '../modules/collection.js';
 
-const moviesCountResolvers = {
+const MoppedsCountResolvers = {
   Query: {
-    MoviesCount(root, args, context) {
-      return Movies && Movies.find().count();
+    MoppedsCount(root, args, context) {
+      return Moppeds && Moppeds.find().count();
     },
   },
 };
-addGraphQLResolvers(moviesCountResolvers);
+addGraphQLResolvers(MoppedsCountResolvers);
 
-addGraphQLQuery(`MoviesCount: Int`);
+addGraphQLQuery(`MoppedsCount: Int`);
