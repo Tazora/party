@@ -14,7 +14,7 @@ const MoppedsList = ({ loading, results }) => (
             <h4>{Mopped.title}</h4>
             {Mopped.artist && <p>{Mopped.artist}</p>}
             {Mopped.user && <p><em>– {Mopped.user.displayName}</em></p>}
-            <h4>{Mopped.votes}</h4>
+            <Components.MoppedsItem document={Mopped} collection={Moppeds} />
           </li>
         )}
       </ul>
@@ -25,7 +25,7 @@ const MoppedsList = ({ loading, results }) => (
 
 const options = {
   collection: Moppeds,
-  // fragmentName: 'MoppedsFragment', // uncomment on #Step11
+  fragmentName: 'MoppedsList', // uncomment on #Step11
 }
 
 registerComponent({ name: 'MoppedsList', component: MoppedsList, hocs: [ [withMulti, options] ] }); // uncomment on #Step10

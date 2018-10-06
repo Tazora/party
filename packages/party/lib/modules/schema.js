@@ -54,17 +54,6 @@ const schema = {
     searchable: true,
   },
 
-  votes: {
-    label: 'Votes',
-    type: Number,
-    optional: true,
-    onCreate: () => {
-      return 0;
-    },
-    canRead: ['guests'],
-    canUpdate: ['members'],
-  },
-
 };
 
 export default schema;

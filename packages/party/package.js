@@ -16,6 +16,7 @@ Package.onUse(function (api) {
     'vulcan:forms@1.12.8',
     'vulcan:accounts@1.12.8',
     'vulcan:ui-bootstrap@1.12.8',
+    'vulcan:voting@1.12.8',
     
   ]);
 

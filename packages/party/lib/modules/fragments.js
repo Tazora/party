@@ -1,13 +1,21 @@
 import { registerFragment } from 'meteor/vulcan:core';
 
-registerFragment(/* GraphQL */`
-  fragment MoviesFragment on Movie {
+registerFragment(`
+  fragment MoppedsList on Mopped {
+
+    # Moppeds
     _id
-    createdAt
-    name
-    # uncomment on #Step12
-    # user{
-    #  displayName
-    # }
+    title
+    artist
+
+    # users
+    userId
+
+    # voting
+    currentUserVotes{
+      ...VoteFragment
+    }
+    baseScore
+    score
   }
 `);

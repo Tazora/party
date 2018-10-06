@@ -5,3 +5,4 @@ import './fragments.js';
 import './permissions.js';
 import './views.js';
 import './i18n.js';
+import './votes.js';
